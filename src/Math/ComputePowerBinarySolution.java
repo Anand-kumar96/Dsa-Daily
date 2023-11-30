@@ -8,23 +8,37 @@ public class ComputePowerBinarySolution {
           int x = sc.nextInt();
           int n = sc.nextInt();
           int res = 1;
-        while(n>0){
+          /*
+          while(n>0){
+            if(n%2==1){
+            //bit 1 logic
+            res = res*x;
+            }
+            //else{
+            // //bit 0 logic
+            // //nothing
+            // }
+            x=x*x;
+            n=n/2;
+          }
+          System.out.println(res);
+           */
+
+        //2nd way
+         while(n>0){
           if(n%2==1){
-          //bit 1 logic
           res = res*x;
           }
-          //else{
-          // //bit 0 logic
-          // //nothing
-          // }
           x=x*x;
-          n=n/2;
+          n=n>>1;
         }
         System.out.println(res);
+
       }
 }
 
 /*
+Tc:O(logn) Tc:O(1)
  logic=> point 1) Every number can be written as sum of power of
  2(set bits in binary representation)
  2) we can traverse through all bits of a number (from LSB to
@@ -46,5 +60,6 @@ public class ComputePowerBinarySolution {
      x=x*x
  }
                                     
-
+point=> n&1 means checking n is odd or not using bitwise operator => in c++
+n = n/2 => can be n=n>>1; n>>1 means n/2 using shift
  */
