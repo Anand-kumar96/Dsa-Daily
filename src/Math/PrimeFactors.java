@@ -69,8 +69,6 @@ public class PrimeFactors {
           if (n > 3) {
                System.out.println(n);
           }
-          // now
-          sc.close();
      }
 }
 
