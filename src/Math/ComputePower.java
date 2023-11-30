@@ -34,7 +34,7 @@ public class ComputePower {
 
 /*
  Naive solution: Tc:O(n)
- efficient solution: Tc:O(logn)
+ efficient solution: Tc:O(logn) Ts:O(logn)
  approach:
  power(x,n) => if(n%2)==0
                power(x,n) = power(x,n/2)*power(x,n/2)
